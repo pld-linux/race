@@ -3,7 +3,7 @@ Summary(pl):	Gra - wy¶cigi samochodowe
 Name:		race
 Version:	0.7.0
 Release:	1
-License:	GPL
+License:	GPL except music
 Group:		Applications/Games
 Source0:	http://race.sourceforge.net/files/Race-%{version}-2_src.tar.gz
 Source1:	%{name}.desktop
@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README*
+%doc README* COPYING.music
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/*
 %{_datadir}/%{name}
