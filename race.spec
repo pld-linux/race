@@ -10,6 +10,7 @@ Source1:	%{name}.desktop
 Patch0:		%{name}-cflags.patch
 URL:		http://race.sourceforge.net/
 BuildRequires:	ClanLib-devel >= 0.6.1-4
+BuildRequires:	autoconf
 BuildRequires:	gcc-c++
 Requires:	/bin/sh
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
