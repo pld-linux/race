@@ -2,7 +2,7 @@ Summary:	A race game
 Summary(pl):	Gra - wy¶cigi samochodowe
 Name:		race
 Version:	0.7.0
-Release:	1
+Release:	2
 License:	GPL except music
 Group:		Applications/Games
 Source0:	http://race.sourceforge.net/files/Race-%{version}-2_src.tar.gz
