@@ -30,14 +30,14 @@ w kilka tras, lecz nadal brakuje jej kilku funkcji.
 %setup -q
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_datadir}/%{name},\
-%{_applnkdir}/Games}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_datadir}/%{name}}
+	$RPM_BUILD_ROOT%{_applnkdir}/Games
+
 cp race $RPM_BUILD_ROOT%{_libdir}
 cat>$RPM_BUILD_ROOT%{_bindir}/race<<EOF
 #!/bin/sh
@@ -46,6 +46,7 @@ exec %{_libdir}/%{name}
 EOF
 cp -a race.{dat,scr} track_list.lst tracks $RPM_BUILD_ROOT%{_datadir}/race
 cp %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+
 gzip -9nf CREDITS README TODO
 
 %clean
