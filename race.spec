@@ -37,7 +37,7 @@ w kilka tras, lecz nadal brakuje jej kilku funkcji.
 %build
 %{__autoconf}
 %configure \
-	--enable-sound 
+	--enable-sound
 
 %{__make}
 
