@@ -12,6 +12,8 @@ Patch0:		%{name}-cflags.patch
 Patch1:		%{name}-api_fix.patch
 URL:		http://race.sourceforge.net/
 BuildRequires:	ClanLib-devel >= 0.6.1-4
+BuildRequires:	ClanLib-OpenGL-devel >= 0.6.1-4
+BuildRequires:	ClanLib-Vorbis-devel >= 0.6.1-4
 BuildRequires:	autoconf
 BuildRequires:	gcc-c++
 Requires:	/bin/sh
