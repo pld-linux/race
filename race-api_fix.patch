@@ -1,0 +1,46 @@
+--- ./src/menu/GUI/button_opengl.cpp.org	Fri Jan 11 18:49:23 2002
++++ ./src/menu/GUI/button_opengl.cpp	Sun Jul 14 13:22:28 2002
+@@ -44,7 +44,7 @@
+ 			this, &CL_Button_OpenGL::on_mouse_enter);
+ 		slot_mouse_leave = button->sig_mouse_leave().connect(
+ 			this, &CL_Button_OpenGL::on_mouse_leave);
+-		slot_timer = timer.sig_timer.connect(
++		slot_timer = timer.sig_timer().connect(
+ 			this, &CL_Button_OpenGL::on_timer);
+ 	}
+ 
+--- ./src/menu/GUI/listbox_opengl.cpp.org	Fri Jan 11 18:49:23 2002
++++ ./src/menu/GUI/listbox_opengl.cpp	Sun Jul 14 13:30:14 2002
+@@ -53,8 +53,8 @@
+ 	int pos = 0;
+ 	int offset = listbox->get_top_item();
+ 
+-	std::vector<CL_ListBox_Item> items = listbox->get_items();
+-	std::vector<CL_ListBox_Item>::iterator it;
++	std::vector<CL_ListItem> items = listbox->get_items();
++	std::vector<CL_ListItem>::iterator it;
+ 	for (it = items.begin(); it != items.end(); it++)
+ 	{
+ 		if (pos < offset)
+--- ./src/menu/GUI/scrollbar_opengl.cpp.org	Fri Jan 11 18:49:23 2002
++++ ./src/menu/GUI/scrollbar_opengl.cpp	Sun Jul 14 13:35:45 2002
+@@ -57,7 +57,7 @@
+ 	slot_decrease_released = button_decrease->sig_released().connect(
+ 		this, &CL_ScrollBar_OpenGL::stop_scroll);
+ 
+-	slot_timer = timer_scroll.sig_timer.connect(
++	slot_timer = timer_scroll.sig_timer().connect(
+ 		this, &CL_ScrollBar_OpenGL::on_timer_scroll);
+ }
+ 
+--- ./src/menu/track_menu.cpp.org	Fri Jan 11 18:49:23 2002
++++ ./src/menu/track_menu.cpp	Sun Jul 14 13:42:35 2002
+@@ -159,7 +159,7 @@
+ 
+ void TrackMenu::save_selection()
+ {
+-	std::vector<CL_ListBox_Item> selected_tracks = lbox_selected.get_items();
++	std::vector<CL_ListItem> selected_tracks = lbox_selected.get_items();
+ 	std::vector<std::string> tracks;
+ 
+ 	std::ofstream fout("data/selected_tracks.lst");
