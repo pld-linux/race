@@ -1,14 +1,15 @@
 Summary:	A race game
+Summary(pl):	Gra - wy¶cigi samochodowe
 Name:		race
 Version:	0.2.0
 Release:	1
 License:	GPL
-Group:		Games
-Group(pl):	Gry
-Group(de):	Spiele
-URL:		http://gamma.nic.fi/~race/
+Group:		Applications/Games
+Group(de):	Applikationen/Spiele
+Group(pl):	Aplikacje/Gry
 Source0:	http://gamma.nic.fi/~%{name}/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
+URL:		http://gamma.nic.fi/~race/
 BuildRequires:	ClanLib-devel
 BuildRequires:	gcc-c++
 Requires:	/bin/sh
@@ -35,7 +36,7 @@ w kilka tras, lecz nadal brakuje jej kilku funkcji.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_datadir}/%{name}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_datadir}/%{name}} \
 	$RPM_BUILD_ROOT%{_applnkdir}/Games
 
 cp race $RPM_BUILD_ROOT%{_libdir}
