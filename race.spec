@@ -4,7 +4,7 @@ Name:		race
 Version:	0.7.0
 Release:	2
 License:	GPL except music
-Group:		Applications/Games
+Group:		X11/Applications/Games
 Source0:	http://race.sourceforge.net/files/Race-%{version}-2_src.tar.gz
 # Source0-md5:	e4442f72506f1c6d4086c7b051fb06e0
 Source1:	%{name}.desktop
