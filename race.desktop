@@ -3,6 +3,6 @@ Name=Race
 Comment=Race Game
 Comment[pl]=Gra Race
 Exec=/usr/X11R6/bin/xterm -e race
-Terminal=0
+Terminal=false
 Type=Application
 # vi: encoding=utf-8
