@@ -19,8 +19,8 @@ Race is a 2d car game. It is playable and has a few tracks but it
 still lacks some features.
 
 %description -l de
-Race ist eine zweidimensionale Kraftwagen-Spiel. Sie ist spielbar und
-hat ein paar Trassen, aber ein paar Funktionen fehlen ihr nach.
+Race ist ein zweidimensionales Kraftwagen-Spiel. Es ist spielbar und
+hat ein paar Trassen, aber ein paar Funktionen fehlen ihm nach.
 
 %description -l pl
 Race jest dwuwymiarow± gr± samochodow±. Jest ona grywalna i wyposa¿ona
