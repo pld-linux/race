@@ -5,8 +5,6 @@ Version:	0.2.0
 Release:	1
 License:	GPL
 Group:		Applications/Games
-Group(de):	Applikationen/Spiele
-Group(pl):	Aplikacje/Gry
 Source0:	http://gamma.nic.fi/~%{name}/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 URL:		http://gamma.nic.fi/~race/
