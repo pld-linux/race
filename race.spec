@@ -16,7 +16,6 @@ BuildRequires:	gcc-c++
 Requires:	/bin/sh
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 Race is a 3d car game. It is playable and has a few tracks but it
