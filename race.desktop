@@ -6,4 +6,5 @@ Comment[pl]=Gra Race
 Exec=/usr/X11R6/bin/xterm -e race
 Terminal=false
 Type=Application
+Categories=Game;X-RacingGame;
 # vi: encoding=utf-8
