@@ -5,3 +5,4 @@ Comment[pl]=Gra Race
 Exec=/usr/X11R6/bin/xterm -e race
 Terminal=0
 Type=Application
+# vi: encoding=utf-8
