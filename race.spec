@@ -17,7 +17,6 @@ BuildRequires:	gcc-c++
 Requires:	/bin/sh
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 Race is a 3d car game. It is playable and has a few tracks but it
 still lacks some features.
@@ -36,7 +35,7 @@ w kilka tras, lecz nadal brakuje jej kilku funkcji.
 %patch1 -p1
 
 %build
-autoconf
+%{__autoconf}
 %configure \
 	--enable-sound 
 
