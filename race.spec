@@ -2,7 +2,7 @@ Summary:	A race game
 Summary(pl):	Gra - wy¶cigi samochodowe
 Name:		race
 Version:	0.7.0
-Release:	3
+Release:	4
 License:	GPL except music
 Group:		X11/Applications/Games
 Source0:	http://race.sourceforge.net/files/Race-%{version}-2_src.tar.gz
@@ -46,7 +46,7 @@ w kilka tras, lecz nadal brakuje jej kilku funkcji.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_datadir}/%{name}/{data,themes,tracks,cars,resources}} \
-	$RPM_BUILD_ROOT%{_applnkdir}/Games
+	$RPM_BUILD_ROOT%{_desktopdir}
 
 cp %{name} $RPM_BUILD_ROOT%{_libdir}
 cat>$RPM_BUILD_ROOT%{_bindir}/%{name} <<EOF
@@ -59,7 +59,7 @@ cp -a themes/*	$RPM_BUILD_ROOT%{_datadir}/%{name}/themes
 cp -a tracks/*	$RPM_BUILD_ROOT%{_datadir}/%{name}/tracks
 cp -a cars/*	$RPM_BUILD_ROOT%{_datadir}/%{name}/cars
 cp -a resources/* $RPM_BUILD_ROOT%{_datadir}/%{name}/resources
-cp %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+cp %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -70,4 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/*
 %{_datadir}/%{name}
-%{_applnkdir}/*/*
+%{_desktopdir}/*
