@@ -2,12 +2,13 @@ Summary:	A race game
 Summary(pl):	Gra - wy¶cigi samochodowe
 Name:		race
 Version:	0.7.0
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications/Games
 Source0:	http://race.sourceforge.net/files/Race-%{version}-2_src.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-cflags.patch
+Patch1:		%{name}-api_fix.patch
 URL:		http://race.sourceforge.net/
 BuildRequires:	ClanLib-devel >= 0.6.1-4
 BuildRequires:	autoconf
@@ -32,6 +33,7 @@ w kilka tras, lecz nadal brakuje jej kilku funkcji.
 %prep
 %setup -q -n Race-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 autoconf
@@ -42,16 +44,20 @@ autoconf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_datadir}/%{name}} \
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_datadir}/%{name}/{data,themes,tracks,cars,resources}} \
 	$RPM_BUILD_ROOT%{_applnkdir}/Games
 
-cp race $RPM_BUILD_ROOT%{_libdir}
-cat>$RPM_BUILD_ROOT%{_bindir}/race<<EOF
+cp %{name} $RPM_BUILD_ROOT%{_libdir}
+cat>$RPM_BUILD_ROOT%{_bindir}/%{name} <<EOF
 #!/bin/sh
 cd %{_datadir}/%{name}
 exec %{_libdir}/%{name}
 EOF
-cp -a race.{dat,scr} track_list.lst tracks $RPM_BUILD_ROOT%{_datadir}/race
+cp -a data/*	$RPM_BUILD_ROOT%{_datadir}/%{name}/data
+cp -a themes/*	$RPM_BUILD_ROOT%{_datadir}/%{name}/themes
+cp -a tracks/*	$RPM_BUILD_ROOT%{_datadir}/%{name}/tracks
+cp -a cars/*	$RPM_BUILD_ROOT%{_datadir}/%{name}/cars
+cp -a resources/* $RPM_BUILD_ROOT%{_datadir}/%{name}/resources
 cp %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 
 %clean
@@ -59,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CREDITS README TODO
+%doc README*
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/*
 %{_datadir}/%{name}
