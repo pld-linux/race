@@ -6,6 +6,7 @@ Release:	2
 License:	GPL except music
 Group:		Applications/Games
 Source0:	http://race.sourceforge.net/files/Race-%{version}-2_src.tar.gz
+# Source0-md5:	e4442f72506f1c6d4086c7b051fb06e0
 Source1:	%{name}.desktop
 Patch0:		%{name}-cflags.patch
 Patch1:		%{name}-api_fix.patch
