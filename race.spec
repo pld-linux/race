@@ -1,5 +1,5 @@
 Summary:	A race game
-Summary(pl.UTF-8):   Gra - wyścigi samochodowe
+Summary(pl.UTF-8):	Gra - wyścigi samochodowe
 Name:		race
 Version:	0.7.0
 Release:	5
