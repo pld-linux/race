@@ -1,5 +1,5 @@
 Summary:	A race game
-Summary(pl):	Gra - wy¶cigi samochodowe
+Summary(pl.UTF-8):   Gra - wyÅ›cigi samochodowe
 Name:		race
 Version:	0.7.0
 Release:	5
@@ -23,12 +23,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Race is a 3d car game. It is playable and has a few tracks but it
 still lacks some features.
 
-%description -l de
+%description -l de.UTF-8
 Race ist ein zweidimensionales Kraftwagen-Spiel. Es ist spielbar und
 hat ein paar Trassen, aber ein paar Funktionen fehlen ihm nach.
 
-%description -l pl
-Race jest trójwymiarow± gr± samochodow±. Jest ona grywalna i wyposa¿ona
+%description -l pl.UTF-8
+Race jest trÃ³jwymiarowÄ… grÄ… samochodowÄ…. Jest ona grywalna i wyposaÅ¼ona
 w kilka tras, lecz nadal brakuje jej kilku funkcji.
 
 %prep
