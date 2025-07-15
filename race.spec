@@ -33,8 +33,8 @@ w kilka tras, lecz nadal brakuje jej kilku funkcji.
 
 %prep
 %setup -q -n Race-%{version}
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %{__autoconf}
